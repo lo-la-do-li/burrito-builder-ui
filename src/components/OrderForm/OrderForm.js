@@ -67,7 +67,7 @@ class OrderForm extends Component {
     });
 
     return (
-      <form>
+      <form aria-label="order-form">
         <input
           type="text"
           placeholder="Name"
