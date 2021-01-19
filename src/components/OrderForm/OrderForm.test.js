@@ -63,6 +63,6 @@ describe("OrderForm", () => {
     fireEvent.click(submitBtn);
 
     expect(mockAddOrder).toHaveBeenCalledTimes(1);
-    expect(mockAddOrder).toHaveBeenCalledWith();
+    expect(mockAddOrder).toHaveBeenCalledWith({ ingredients, name });
   });
 });
