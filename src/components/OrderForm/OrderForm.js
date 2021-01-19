@@ -78,7 +78,9 @@ class OrderForm extends Component {
 
         {ingredientButtons}
 
-        <p>Order: {this.state.ingredients.join(", ") || "Nothing selected"}</p>
+        <p aria-label="order-message">
+          Order: {this.state.ingredients.join(", ") || "Nothing selected"}
+        </p>
 
         <button onClick={(e) => this.handleSubmit(e)}>Submit Order</button>
       </form>
