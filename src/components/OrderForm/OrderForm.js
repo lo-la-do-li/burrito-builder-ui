@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class OrderForm extends Component {
   constructor(props) {
     super(props);
-    // this.props = props;
+    this.props = props;
     this.state = {
       name: "",
       ingredients: [],
@@ -17,6 +17,14 @@ class OrderForm extends Component {
 
   handleNameChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleIngredientChange = (e) => {
+    e.preventDefault();
+    let ingredient = e.target.name;
+    this.setState({
+      ingredients: [...this.state.ingredients, ingredient],
+    });
   };
 
   clearInputs = () => {
